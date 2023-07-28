@@ -5,6 +5,7 @@ import { HiHome } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import Box from './Box'
 import SidebarItem from './SidebarItem'
+import Library from './Library'
 export default function Sidebar({ children }: { children : ReactNode }) {
 
     const pathname = usePathname()
@@ -35,21 +36,23 @@ export default function Sidebar({ children }: { children : ReactNode }) {
         w-[300px]
         p-2
         '>
-        <Box>
-            <nav className='flex flex-col gap-y-4 px-4 py-5'>
-                {routes.map(item => (
-                    <SidebarItem 
-                    icon={item.icon}
-                    label={item.label}
-                    active={item.active}
-                    href={item.href}
-                    key={item.label}  />
-                ))}
-            </nav>
-        </Box>
-        <Box className='overflow-y-auto h-full'>Song Library</Box>
-    
+            <Box>
+                <nav className='flex flex-col gap-y-4 px-4 py-5'>
+                    {routes.map(item => (
+                        <SidebarItem 
+                        icon={item.icon}
+                        label={item.label}
+                        active={item.active}
+                        href={item.href}
+                        key={item.label}  />
+                    ))}
+                </nav>
+            </Box>
+            <Box className='overflow-y-auto h-full'>
+                <Library/>
+            </Box>
         </div>
+        <main className='h-full flex-1 overflow-y-auto py-2'>{ children }</main>
     </div>
   )
 }
