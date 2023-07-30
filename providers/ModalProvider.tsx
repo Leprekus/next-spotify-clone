@@ -1,4 +1,6 @@
 'use client'
+import Modal from '@/components/Modal'
+
 import React, { useEffect, useState } from 'react'
 
 //modals can cause hydration errors
@@ -13,6 +15,15 @@ export default function ModalProvider() {
     if(!isMounted) return null
 
   return (
-    <></>
+    <>
+      <Modal 
+      title='test modal' 
+      description='test desc'
+      isOpen
+      onChange={() => {}}
+      >
+        Chidlren
+      </Modal>
+    </>
   )
 }

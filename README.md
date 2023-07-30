@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Spotify Clone
 
-## Getting Started
+## Sections
 
-First, run the development server:
+- Technologies
+- What I Learned
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The technologies used for this web app are:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.Js
+- Supabase
+- Radix UI
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The main framework used for the application is Next.js which is using the newest app directory.
+As a database I decided to go with Supabase which I had heard quite a lot about, but had never gotten around to trying it. It was actually an enjoyable experience, I got to set it up and start working with it quickly. I would definetely use it again.
+Radix UI is used for the modal menus.
 
-## Learn More
+## What I learned
 
-To learn more about Next.js, take a look at the following resources:
+During this project I noticed there were several tools that I had been omitting as a React developer. Mainly the use of providers and hooks.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**For Future Reference:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- I should use Providers to faciliatate the interaction between components across different levels of depth in the application
+- Combining the power of hooks with providers is a powerful way to access data across the entire application avoiding rerenders and refetching of duplicate data
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
