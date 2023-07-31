@@ -18,7 +18,7 @@ export default function Library() {
                 inline-flex
                 items-center
                 gap-x-2'>
-                <TbPlaylist classname='text-neutral-400'/>
+                <TbPlaylist className='text-neutral-400'/>
                 <p className='
                 text-neutral-400 
                 font-medium 
