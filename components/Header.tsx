@@ -139,7 +139,7 @@ export default function Header({
                     <>
                         <div>
                             <Button 
-                            onClick={authModal.onOpen}
+                            onClick={authModal.Open}
                             className='
                                 bg-transparent
                                 text-neutral-300
@@ -148,7 +148,7 @@ export default function Header({
                         </div>
                         <div>
                             <Button 
-                            onClick={authModal.onOpen}
+                            onClick={authModal.Open}
                             className='
                                 bg-white
                                 px-6

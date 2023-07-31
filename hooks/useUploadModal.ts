@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-interface AuthModalStore {
+interface UploadModalStore {
     isOpen: boolean;
     Open: () => void;
     Close: () => void;
@@ -8,11 +8,11 @@ interface AuthModalStore {
 
 }
 
-const useAuthModal = create<AuthModalStore>((set) => ({
+const useUploadModal = create<UploadModalStore>((set) => ({
     isOpen: false,
     Open: () => set({ isOpen: true }),
     Close: () => set({ isOpen: false }),
 
 }))
 
-export default useAuthModal
+export default useUploadModal
