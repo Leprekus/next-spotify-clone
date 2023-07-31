@@ -15,7 +15,7 @@ export default function UploadModal() {
     title='Upload Modal'
     description='Upload Modal desc'
     isOpen={uploadModal.isOpen}
-    onChange={() => {}}
+    onChange={ handleChange }
     >UploadModal</Modal>
   )
 }

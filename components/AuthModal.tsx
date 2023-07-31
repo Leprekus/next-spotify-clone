@@ -29,7 +29,7 @@ export default function AuthModal() {
         title='Welcome Back'
         description='Login to account'
         isOpen={isOpen}
-        onChange={() => handleChange}
+        onChange={ handleChange }
 
     >
         <Auth
