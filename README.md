@@ -24,7 +24,7 @@ During this project I noticed there were several tools that I had been omitting 
 
 **For Future Reference:**
 
-- I should use Providers to faciliatate the interaction between components across different levels of depth in the application
+- I should use Providers to faciliatate the interaction between components across different levels of depth in the application. They are especially useful to render toast notifications and modal menus
 - Combining the power of hooks with providers is a powerful way to access data across the entire application avoiding rerenders and refetching of duplicate data
-- Zustand can be reserve for the more complex state management. But from now on I will go to Context for the more general things.
+- Zustand can be reserved to adding interactivity across different components. Zustand is especially useful to work alongside providers to toggle them on and off.
 
