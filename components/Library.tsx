@@ -5,7 +5,9 @@ import { AiOutlinePlus } from 'react-icons/ai'
 import useAuthModal from '@/hooks/useAuthModal'
 import { useUser } from '@/hooks/useUser'
 import useUploadModal from '@/hooks/useUploadModal'
-export default function Library() {
+import { Song } from '@/types'
+import MediaItem from './MediaItem'
+export default function Library({ songs }:{ songs:Song[] }) {
     const authModal = useAuthModal()
     const uploadModal = useUploadModal()
     const { user } = useUser()
@@ -16,6 +18,7 @@ export default function Library() {
         //TODO: check for subcsription
         return uploadModal.Open()
     }
+    console.log(songs)
   return (
     <div className='flex flex-col'>
         <div
@@ -52,7 +55,14 @@ export default function Library() {
         flex-col
         gap-y-2
         mt-4
-        px-3'>List of songs</div>
+        px-3'>{
+            songs.map((song) => 
+            <MediaItem 
+            key={song.id}
+            data={song}
+            onClick={() => {}}
+            />)
+        }</div>
     </div>
   )
 }
