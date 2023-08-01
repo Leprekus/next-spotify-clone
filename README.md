@@ -18,6 +18,12 @@ The main framework used for the application is Next.js which is using the newest
 As a database I decided to go with Supabase which I had heard quite a lot about, but had never gotten around to trying it. It was actually an enjoyable experience, I got to set it up and start working with it quickly. I would definetely use it again.
 Radix UI is used for the modal menus.
 
+## Notes
+
+**useSupabaseContext** is mainly used for content that requires authentication.
+**useUsabaseClient** provides read access to both authenticated and unauthenticated users
+
+
 ## What I learned
 
 During this project I noticed there were several tools that I had been omitting as a React developer. Mainly the use of providers and hooks.
