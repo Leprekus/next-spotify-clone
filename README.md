@@ -23,6 +23,40 @@ Radix UI is used for the modal menus.
 **useSupabaseContext** is mainly used for content that requires authentication.
 **useUsabaseClient** provides read access to both authenticated and unauthenticated users
 
+Hooks like this are beautiful
+
+```ts
+
+const useOnPlay = (songs: Song[]) => {
+    const player = usePlayer();
+    const authModal = useAuthModal()
+    const { user } = useUser()
+
+    const onPlay = (id:string) => {
+        if(!user) return authModal.Open()
+        
+        player.setId(id)
+        player.setIds(songs.map(song => song.id))
+        
+    }
+
+    return onPlay
+}
+
+```
+
+How it works
+
+```ts
+const onPlay = useOnPlay(songsArray)
+<button onClick={ (id) => onPlay(id) } >Set Song id</button>
+
+```
+
+It gets first called with the array of the songs that are currently available to the
+user. It then gets called a second time to set the id of one of the current available
+songs as playing and adds the rest of the songs to the queue.
+It gets so much done with so little lines of code.
 
 ## What I learned
 
