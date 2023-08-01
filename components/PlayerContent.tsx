@@ -6,6 +6,7 @@ import LikedButton from './LikedButton';
 import { BsPauseFill, BsPlayFill } from 'react-icons/bs'
 import { AiFillStepBackward, AiFillStepForward } from 'react-icons/ai';
 import { HiSpeakerXMark, HiSpeakerWave } from 'react-icons/hi2';
+//@ts-ignore
 import useSound from 'use-sound'
 import Slider from './Slider';
 import usePlayer from '@/hooks/usePlayer';

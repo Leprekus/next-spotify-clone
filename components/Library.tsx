@@ -7,10 +7,12 @@ import { useUser } from '@/hooks/useUser'
 import useUploadModal from '@/hooks/useUploadModal'
 import { Song } from '@/types'
 import MediaItem from './MediaItem'
+import useOnPlay from '@/hooks/useOnPlay'
 export default function Library({ songs }:{ songs:Song[] }) {
     const authModal = useAuthModal()
     const uploadModal = useUploadModal()
     const { user } = useUser()
+    const onPlay = useOnPlay(songs)
     const handleClick = () => {
         if(!user)
             return authModal.Open()
@@ -60,7 +62,7 @@ export default function Library({ songs }:{ songs:Song[] }) {
             <MediaItem 
             key={song.id}
             data={song}
-            onClick={() => {}}
+            onClick={(id: string) => onPlay(id)}
             />)
         }</div>
     </div>
