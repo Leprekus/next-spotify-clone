@@ -9,7 +9,7 @@ export default async function getLikedSongs(): Promise<Song[]> {
 
   const { data : { session } } = await supabase.auth.getSession()
   const { data, error } = await supabase
-  .from('songs')
+  .from('liked_songs')
   .select('*, songs(*)')
   .eq('user_id', session?.user?.id)
   .order('created_at', { ascending: false })

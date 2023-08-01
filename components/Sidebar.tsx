@@ -7,6 +7,7 @@ import Box from './Box'
 import SidebarItem from './SidebarItem'
 import Library from './Library'
 import { Song } from '@/types'
+import { AiFillHeart } from 'react-icons/ai'
 export default function Sidebar({ children, songs }: { children : ReactNode, songs: Song[] }) {
 
     const pathname = usePathname()
@@ -23,7 +24,13 @@ export default function Sidebar({ children, songs }: { children : ReactNode, son
             active: pathname === '/search',
             href: '/search'
         },
-    ], [])
+        {
+            icon: AiFillHeart,
+            label: 'Liked',
+            active: pathname === '/liked',
+            href: '/liked'
+        },
+    ], [pathname])
 
   return (
     <div className=' flex h-full'>
