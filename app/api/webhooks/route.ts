@@ -29,7 +29,7 @@ export async function POST(
     let event: Stripe.Event;
 
     try {
-        if(!signature || ! webhookSecret) return 
+        if(!signature || !webhookSecret) return 
 
         event = stripe.webhooks.constructEvent(body, signature, webhookSecret)
 

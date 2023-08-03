@@ -11,12 +11,14 @@ export async function POST (
     const { price, quantity = 1, metadata = {} } = await request.json()
 
     try {
+        
         const supabase = createRouteHandlerClient({ cookies })
         const { data : { user } } = await supabase.auth.getUser()
         const customer = await createOrRetrieveCustomer({ 
             uuid: user?.id || '',
             email: user?.email || ''
         })
+        
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             billing_address_collection: 'required',
@@ -40,6 +42,7 @@ export async function POST (
         return NextResponse.json({ sessionId: session.id })
 
     } catch(error) {
+        console.log('Error at create-checkout-session', { error })
         return new NextResponse('Internal Error ', { status: 500 })
     }
 }
