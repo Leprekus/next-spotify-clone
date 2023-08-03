@@ -5,11 +5,11 @@ import Modal from './Modal'
 import useUploadModal from '@/hooks/useUploadModal'
 import { type FieldValues, useForm, SubmitHandler, Field } from 'react-hook-form'
 import Input from '../ui/Input'
-import Button from '../Button'
 import toast from 'react-hot-toast'
 import { useUser } from '@/hooks/useUser'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useRouter } from 'next/navigation'
+import Button from '../ui/Button'
 
 export default function UploadModal() {
 
