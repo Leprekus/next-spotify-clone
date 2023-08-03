@@ -1,7 +1,7 @@
 'use client'
 
 import Box from '@/components/ui/Box'
-import Button from '@/components/Button'
+import Button from '@/components/ui/Button'
 import React from 'react'
 
 export default function Error() {
