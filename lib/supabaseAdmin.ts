@@ -120,9 +120,9 @@ const copyBillingDetailsToCustomer = async (
         if(error) throw error
 }
 
-const manageSubscriptionStatusChagnge = async (
+const manageSubscriptionStatusChange = async (
     subscriptionId: string,
-    customerId: IdleDeadline,
+    customerId: string,
     createAction = false
 ) => {
     const { data: customerData, error: noCustomerError } = await supabaseAdmin
@@ -189,6 +189,6 @@ export {
     upsertProductRecord,
     upsertPriceRecord,
     createOrRetrieveCustomer,
-    manageSubscriptionStatusChagnge,
+    manageSubscriptionStatusChange,
     
 }
