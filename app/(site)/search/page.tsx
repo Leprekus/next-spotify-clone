@@ -6,7 +6,7 @@ interface SearchProps {
 
 import getSongsByTitle from '@/actions/getSongsByTitle'
 import Header from '@/components/Header'
-import SearchInput from '@/components/SearchInput'
+import SearchInput from '@/components/ui/SearchInput'
 import React from 'react'
 import SearchContent from './components/SearchContent'
 

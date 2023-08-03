@@ -1,6 +1,6 @@
 'use client'
-import AuthModal from '@/components/AuthModal'
-import UploadModal from '@/components/UploadModal'
+import AuthModal from '@/components/modal/AuthModal'
+import UploadModal from '@/components/modal/UploadModal'
 
 import React, { useEffect, useState } from 'react'
 

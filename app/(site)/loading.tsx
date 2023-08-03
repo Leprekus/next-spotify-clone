@@ -1,4 +1,4 @@
-import Box from '@/components/Box'
+import Box from '@/components/ui/Box'
 import React from 'react'
 import { MoonLoader } from 'react-spinners'
 export default function loading() {

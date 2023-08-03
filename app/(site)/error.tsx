@@ -1,6 +1,6 @@
 'use client'
 
-import Box from '@/components/Box'
+import Box from '@/components/ui/Box'
 import Button from '@/components/Button'
 import React from 'react'
 
