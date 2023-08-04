@@ -58,7 +58,7 @@ export default function AccountContent() {
   return (
     <Container>
         <p>You are currently on the <b>{subscription?.prices?.products?.name}</b> plan.</p>
-    
+        <p>{user?.email}</p>
         <Button 
             className='w-[300px]'
             disabled={loading || isLoading}
