@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import useAuthModal from '@/hooks/useAuthModal';
+import { BsFillClipboardFill } from 'react-icons/bs';
+import toast from 'react-hot-toast';
 
 export default function AuthModal() {
     const supabaseClient = useSupabaseClient();
@@ -24,6 +26,7 @@ export default function AuthModal() {
         if(!open)
             onClose()
     }
+
   return (
     <Modal
         title='Welcome Back'
@@ -32,6 +35,41 @@ export default function AuthModal() {
         onChange={ handleChange }
 
     >
+        <div className='flex flex-col gap-4 items-center'>
+            <p>Admin Credentials</p>
+            <div className='flex justify-center gap-4'>
+                <button 
+                className='
+                px-4 
+                py-2 
+                rounded-md 
+                bg-[#2e2e2e] 
+                border 
+                border-zinc-600
+                flex gap-4'
+                onClick={() => { 
+                    navigator.clipboard.writeText('leprekus@yahoo.com'), toast.success('Copied') 
+                }}
+                >
+                    <BsFillClipboardFill/> <p>Username</p>
+                </button>
+                <button 
+                className='
+                px-4 
+                py-2 
+                rounded-md 
+                bg-[#2e2e2e] 
+                border 
+                border-zinc-600
+                flex gap-4'
+                onClick={() => { 
+                    navigator.clipboard.writeText('qwerty'), toast.success('Copied') 
+                }}
+                >
+                    <BsFillClipboardFill/> <p>Password</p>
+                </button>
+            </div>
+        </div>
         <Auth
         theme='dark'
         magicLink
