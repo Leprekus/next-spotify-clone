@@ -131,7 +131,7 @@ export default function PlayerContent({
         '
         >   
             <AiFillStepBackward size={24} 
-            onClick={() => {}}
+            onClick={ onPlayPrevious }
             className='
                 cursor-pointer
                 text-white
