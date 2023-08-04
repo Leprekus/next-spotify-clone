@@ -8,19 +8,27 @@ import useUploadModal from '@/hooks/useUploadModal'
 import { Song } from '@/types'
 import MediaItem from './MediaItem'
 import useOnPlay from '@/hooks/useOnPlay'
+import useSubscribeModal from '@/hooks/useSubscribeModal'
 export default function Library({ songs }:{ songs:Song[] }) {
+
+
     const authModal = useAuthModal()
     const uploadModal = useUploadModal()
-    const { user } = useUser()
+    const subscribeModal = useSubscribeModal()
+    const { user, subscription } = useUser()
+
     const onPlay = useOnPlay(songs)
+
     const handleClick = () => {
         if(!user)
             return authModal.Open()
         
-        //TODO: check for subcsription
+        if(!subscription) 
+            return subscribeModal.Open()
+            
         return uploadModal.Open()
     }
-    console.log(songs)
+
   return (
     <div className='flex flex-col'>
         <div
